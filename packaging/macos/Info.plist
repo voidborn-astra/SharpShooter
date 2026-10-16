@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2026 SharpShooter contributors -->
+<!-- SPDX-License-Identifier: GPL-2.0-or-later -->
+<!-- App bundle metadata. make-app.sh replaces @VERSION@. -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleName</key>
+  <string>SharpShooter</string>
+  <key>CFBundleDisplayName</key>
+  <string>SharpShooter</string>
+  <key>CFBundleIdentifier</key>
+  <string>io.github.sharpshooter</string>
+  <key>CFBundleExecutable</key>
+  <string>SharpShooter</string>
+  <key>CFBundleIconFile</key>
+  <string>SharpShooter</string>
+  <key>CFBundlePackageType</key>
+  <string>APPL</string>
+  <key>CFBundleShortVersionString</key>
+  <string>@VERSION@</string>
+  <key>CFBundleVersion</key>
+  <string>@VERSION@</string>
+  <key>LSMinimumSystemVersion</key>
+  <string>13.0</string>
+  <key>LSApplicationCategoryType</key>
+  <string>public.app-category.developer-tools</string>
+  <key>NSHighResolutionCapable</key>
+  <true/>
+</dict>
+</plist>

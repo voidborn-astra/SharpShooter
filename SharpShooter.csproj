@@ -1,0 +1,31 @@
+<!-- Copyright (C) 2026 SharpShooter contributors -->
+<!-- SPDX-License-Identifier: GPL-2.0-or-later -->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <Version>0.1.0</Version>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <!-- Published builds are trimmed. Flag reflection-dependent code in every build. -->
+    <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+    <ApplicationIcon>Assets\SharpShooter.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="12.1.0" />
+    <PackageReference Include="Avalonia.Desktop" Version="12.1.0" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="12.1.0" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="12.1.0" />
+    <AvaloniaResource Include="Assets\**" Exclude="Assets\icon.png" />
+    <Compile Remove="tests/**/*.cs" />
+  </ItemGroup>
+  <!-- SkiaSharp and HarfBuzz ship about 105 MB of native symbols. Keep them out of published output. -->
+  <Target Name="RemoveNativeSymbolsFromPublish" AfterTargets="ComputeResolvedFilesToPublishList">
+    <ItemGroup>
+      <ResolvedFileToPublish Remove="@(ResolvedFileToPublish)" Condition="'%(Extension)' == '.pdb'" />
+    </ItemGroup>
+  </Target>
+</Project>

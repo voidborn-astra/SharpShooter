@@ -1,0 +1,10 @@
+# Copyright (C) 2026 SharpShooter contributors
+# SPDX-License-Identifier: GPL-2.0-or-later
+#
+# Store and check out text files with LF on every platform.
+
+* text=auto eol=lf
+*.bat text eol=crlf
+*.png binary
+*.ico binary
+*.ttf binary

@@ -1,0 +1,6 @@
+# Copyright (C) 2026 SharpShooter contributors
+# SPDX-License-Identifier: GPL-2.0-or-later
+bin/
+obj/
+tests/bin/
+tests/obj/

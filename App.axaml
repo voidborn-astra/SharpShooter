@@ -1,0 +1,26 @@
+<!--
+Copyright (C) 2026 SharpShooter contributors
+SPDX-License-Identifier: GPL-2.0-or-later
+Application root. Resources and styles load in cascade order.
+-->
+
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="SharpShooter.ShooterApp"
+             RequestedThemeVariant="Dark">
+  <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceInclude Source="avares://SharpShooter/Themes/Tokens.axaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Application.Resources>
+
+  <Application.Styles>
+    <FluentTheme />
+    <StyleInclude Source="avares://SharpShooter/Themes/Styles/Base.axaml" />
+    <StyleInclude Source="avares://SharpShooter/Themes/Styles/Surfaces.axaml" />
+    <StyleInclude Source="avares://SharpShooter/Themes/Styles/Buttons.axaml" />
+    <StyleInclude Source="avares://SharpShooter/Themes/Styles/Chrome.axaml" />
+  </Application.Styles>
+</Application>

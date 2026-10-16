@@ -1,0 +1,18 @@
+# Copyright (C) 2026 SharpShooter contributors
+# SPDX-License-Identifier: GPL-2.0-or-later
+#
+# Keeps workflow actions and NuGet packages current with weekly pull requests.
+
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+  - package-ecosystem: nuget
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      avalonia:
+        patterns: ["Avalonia*"]

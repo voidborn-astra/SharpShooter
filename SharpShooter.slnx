@@ -1,0 +1,8 @@
+<!-- Copyright (C) 2026 SharpShooter contributors -->
+<!-- SPDX-License-Identifier: GPL-2.0-or-later -->
+<Solution>
+  <Project Path="SharpShooter.csproj" />
+  <Folder Name="/Tests/">
+    <Project Path="tests/SharpShooter.Tests.csproj" />
+  </Folder>
+</Solution>
